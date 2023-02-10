@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/MyFramework.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+
+    <title>Etat d'avancement</title>
+    <link rel="stylesheet" href="{% static 'css/main2.css' %}">
+</head>
+
+<body>
+    <a href="main2_1.html">Séance Sup</a>
+    <main class="container">
+        <h1 class="text-heading">Etat d'avancement des cours</h1>
+        <div>
+            <h2 class="text-heading">Ontologies et Services Web</h2>
+            <form action="">
+                <div id="input_am">
+                    <label for="am">Avancement % :</label>
+                    <input type="number" max="100" min="0" name="am" id="am" value="40">
+                </div>
+                <div id="input_desc">
+                    <label for="desc_am">descrpition :</label><br>
+                    <textarea name="desc_am" id="desc_am" cols="40" rows="7" maxlength="300"
+                        contenteditable='true'></textarea>
+                </div>
+                <input type="submit" name="am_submit" value="mettre a jour">
+                <p>derniere modification : <span>22/11/2022</span></p>
+            </form>
+        </div>
+        <a href="index.html" id="dec">Déconnexion</a>
+    </main>
+</body>
+
+</html>

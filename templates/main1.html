@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/MyFramework.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+
+    <title>Suivi d'avancement</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <style>
+
+        .cont {
+            padding: 15px 15px;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            width: 500px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: wheat;
+            color: #333;
+            position: relative;
+        }
+        .b{
+            width: 50px;
+        }
+        .graph {
+            width: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .graph .p {
+            margin: auto;
+            height: 150px;
+            width: 10px;
+            position: relative
+        }
+
+        .p .p_p {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #3fd0c9;
+        }
+
+        .graph .t {
+            padding: 10px;
+            font-size: 8px;
+            text-align: center;
+            height: 40px;
+        }
+        .ligne{
+            background-color: black;
+            position: absolute;
+            z-index: 2;
+        }
+        #l1{
+            width: 99%;
+            left: 1%;
+            height: 1px;
+            bottom: 72px;
+        }
+        #l2{
+            height: 150px;
+            left: 1%;
+            width: 1.5px;
+            bottom: 72px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="main1_1.html">Prédiction</a>
+    <main class="container">
+        <h1 class="text-heading">Etat d'avancement des cours</h1>
+        <div class="cont">
+            <div class="ligne" id="l1"></div>
+            <div class="ligne" id="l2"></div>
+            <div class="graph">
+                {% for x in prog %}
+                <div class="b">
+                    <div class="p">
+                        <div class="p_p" style="height: {{x.prog}}%"></div>
+                    </div>
+                    <p class="t">{{x.module}}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <p>Etat d'avancement des cours</p>
+        </div>
+        <div class="modules">
+            {% for x in prog %}
+            <div class="box">
+                <div class="m_p">
+                    <h1>{{ x.intitulé }}</h1>
+                    <h2>{{ x.enseigant }}</h2>
+                </div>
+                <div class="p_p">
+                    <div class="prog">
+                        <div class="progress" style='width: {{x.prog}}%; '>
+                        </div>
+                    </div>
+                    <h2>{{x.prog}} %</h2>
+                </div>
+                <p class="desc">{{ x.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="index.html" id="dec">Déconnexion</a>
+    </main>
+</body>
+
+</html>

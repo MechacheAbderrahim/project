@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/MyFramework.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+
+    <title>Suivi d'avancement</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="text-heading">Emploi du temps M2SIA G2</h1>
+        <table>
+            <tr>
+                <th>Jour</th>
+                <th>8:-9:30</th>
+                <th>9:40-11:10</th>
+                <th>11:20-12:50</th>
+                <th>13:00-14:30</th>
+                <th>14:40-16:10</th>
+            </tr>
+            <tr>
+                <td>Dimanche</td>
+                <td>
+                    <span>TD SF</span><br>
+                    <span>B8 S7</span>
+                </td>
+                <td>
+                    <span>TP SW</span><br>
+                    <span>B1 S6</span>
+                </td>
+                <td>
+                    <span></span><br>
+                    <span></span>
+                </td>
+                <td>
+                    <span>Cours SW</span><br>
+                    <span>B5 S120</span>
+                </td>
+                <td>
+                    <span>TD SSI</span><br>
+                    <span>B5 S120</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Lundi</td>
+                <td>
+                    <span>TD SSI</span><br>
+                    <span>B1 S120</span>
+                </td>
+                <td>
+                    <span>Cours Init</span><br>
+                    <span>A16</span>
+                </td>
+                <td>
+                    <span></span><br>
+                    <span></span>
+                </td>
+                <td class="new_S">
+                    <span>Cours SF</span><br>
+                    <span>B5 S120</span>
+                </td>
+                <td class="new_S">
+                    <span>TD SIAD</span><br>
+                    <span>B8 S10</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Mardi</td>
+                <td>
+                    <span>TP SIAD</span><br>
+                    <span>B8 S1</span>
+                </td>
+                <td>
+                    <span>Cours SIAD</span><br>
+                    <span>B5 S120</span>
+                </td>
+                <td class="new_S">
+                    <span>Cours EAI</span><br>
+                    <span>B5 S110</span>
+                </td>
+                <td class="new_S">
+                    <span>TD SSI</span><br>
+                    <span>B8 S2</span>
+                </td>
+                <td>
+                    <span></span><br>
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Mercredi</td>
+                <td>
+                    <span>Cours SF</span><br>
+                    <span>B5 S120</span>
+                </td>
+                <td>
+                    <span>Cours SF</span><br>
+                    <span>B5 S120</span>
+                </td>
+                <td>
+                    <span>Cours IneroSI</span><br>
+                    <span>B5 S120</span>
+                </td>
+                <td>
+                    <span>TD IneroSI</span><br>
+                    <span>B5 S120</span>
+                </td>
+                <td>
+                    <span></span><br>
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Jeudi</td>
+                <td>
+                    <span>TD SIAD</span><br>
+                    <span>A26</span>
+                </td>
+                <td>
+                    <span>Cours SIG</span><br>
+                    <span>B1 S16</span>
+                </td>
+                <td>
+                    <span></span><br>
+                    <span></span>
+                </td>
+                <td>
+                    <span></span><br>
+                    <span></span>
+                </td>
+                <td>
+                    <span></span><br>
+                    <span></span>
+                </td>
+            </tr>
+        </table>    
+        <p> Note : les séances en <span>__</span> sont des séances supplémentaires (seront supprimés à la fin de chaque semain)</p>
+        <a href="index.html" id="dec">Déconnexion</a>    
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAID</title>
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/MyFramework.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}"> 
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <main class="container" id="main">
+        <h1 class="text-heading">SIAD pour le déparetement d'informatique</h1>
+        <div class="profils">
+            <a href="auth3.html">
+                <div class="profil_box" id="etudiant">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Etudiant</p>
+                </div>
+            </a>
+            <a href="auth1.html">
+                <div class="profil_box" id="resposable">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <p>Responsable</p>
+                </div>
+            </a>
+            <a href="auth2.html">
+                <div class="profil_box" id="enseigant">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <p>Enseigant</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/MyFramework.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+
+    <title>SAID</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="text-heading">Authentification Etudiant</h1>
+        <form action="main3.html">
+            <div>
+                <label for="id_etudiant">Email</label>
+                <input required type="text" id="id_etudiant" name="id_etudiant"
+                value="abderrahim.mechache@se.univ-bejaia.dz">
+            </div>
+            <div>
+                <label for="psw_etudiant">password</label>
+                <input required type="password" id="psw_etudiant" name="psw_etudiant" value="1234567890">
+            </div>
+            <div>
+                <input type="submit" value="Connecter" id="cnt_etudiant" name="cnt_etudiant">
+            </div>
+        </form>
+        <div id="anim">
+        </div>
+    </main>
+</body>
+
+</html>

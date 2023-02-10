@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/MyFramework.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+
+    <title>Etat d'avancement</title>
+    <link rel="stylesheet" href="{% static 'css/main2.css' %}">
+</head>
+
+<body>
+    <a href="main2_1.html">Séance Sup</a>
+    <main id="b" class="container">
+        <h1 class="text-heading">Programmer une séance supplémentaire</h1>
+        <div>
+            <h2 class="text-heading">SI d'aide à la décision</h2>
+            <form action="" onsubmit="show()">
+                <div class="ss_form">
+                    <div id="input_ss1">
+                        <label for="groupe_ss">Groupe</label>
+                        <select name="groupe_ss" id="groupe_ss">
+                            <option value="S">Section</option>
+                            <option value="A1">GROUPE A1</option>
+                            <option value="A2">GROUPE A2</option>
+                        </select>
+                    </div>
+                    <div id="input_ss2">
+                        <label for="type_ss">Séance de:</label>
+                        <select name="type_ss" id="type_ss">
+                            <option value="c">Cours</option>
+                            <option value="d">TD</option>
+                            <option value="">TP</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- <input type="submit" name="ss_submit" id="ss_submit" value="Recherche"> -->
+
+            </form>
+            <button id="ss_submit">Recherche</button>
+        </div>
+        <div class="result" id="results">
+            <div class="result-box">
+                <input type="checkbox" value="r1" id="r1">
+                <label for="r1">
+                    <span class="ss_date">Dimanche 25/01/2022</span>
+                    <span class="ss_salle">Bloc 5 SALLE 120</span>
+                    <span class="ss_horaire">9:40 - 11:10</span>
+                </label>
+            </div>
+            <div class="result-box">
+                <input type="checkbox" value="r2" id="r2">
+                <label for="r2">
+                    <span class="ss_date">lundi 26/01/2022</span>
+                    <span class="ss_salle">Bloc 8 SALLE 7</span>
+                    <span class="ss_horaire">9:40 - 11:10</span>
+                </label>
+            </div>
+            <div class="result-box">
+                <input type="checkbox" value="r3" id="r3">
+                <label for="r3">
+                    <span class="ss_date">Mercredi 25/01/2022</span>
+                    <span class="ss_salle">Bloc 8 SALLE 1</span>
+                    <span class="ss_horaire">14:40 - 16:10</span>
+                </label>
+            </div>
+            <button id="val">Valider</button>
+            
+        </div>
+        <a href="index.html" id="dec">Déconnexion</a>
+    </main>
+
+    <script>
+        s_f = document.getElementById('ss_submit')
+        s_f.addEventListener("click", show)
+        b = document.getElementById("results")
+        function show() {
+            b.style.display = 'block'
+        }
+        val.addEventListener("click", validation)
+        function validation(){
+            alert('la séance a été programmer avec succes')
+            location.reload()
+        }
+    </script>
+</body>
+
+</html>

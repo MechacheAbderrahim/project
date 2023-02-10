@@ -1,0 +1,75 @@
+body {
+    background-color: var(--white-1);
+}
+
+.container {
+    margin-top: 50px;
+}
+
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    align-items: center;
+}
+
+form div {
+    position: relative;
+}
+
+input[type=text],
+input[type=password] {
+    width: 320px;
+    height: 35px;
+    padding-top: 15px;
+    padding-bottom: 7px;
+    margin-bottom: 35px;
+    border: 0;
+    border-bottom: 2.5px solid var(--color-4);
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    border: 0;
+    border-bottom: 2.5px solid var(--color-4);
+    outline: none;
+}
+
+label {
+    padding: 5px 5px;
+    background: linear-gradient(var(--white-1) 0%, var(--white-1) 59%, rgba(255, 255, 255, 1) 100%);
+    color: var(--color-3);
+    position: absolute;
+    top: -17px;
+    left: 10px;
+}
+
+input[type=submit] {
+    padding: 10px 10px;
+    background-color: var(--color-4);
+    color: var(--white-);
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    transition: 1s;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.1);
+}
+
+.bx {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color-4);
+    position: absolute;
+}
+
+@media (max-width:767px) {
+    .bx {
+        display: none;
+    }
+}

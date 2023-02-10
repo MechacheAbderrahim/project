@@ -1,0 +1,47 @@
+body{
+  background-color: var(--white-1);
+}
+
+main{
+  margin-top: 50px;
+}
+.profils{
+  margin: 50px auto;
+  width: 750px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profil_box{
+  width: 200px;
+  text-align: center;
+  padding: 10px 30px;
+  font-size: 18px;
+  color: var(--color-3);
+  cursor: pointer;
+  transition: 1.5s;
+  border-radius: 5px;
+}
+
+.profil_box:hover{
+  background-color: var(--color-3);
+  color: var(--white-1);
+}
+
+.profil_box i{
+  padding: 30px 10px;
+  font-size: 68px;
+  margin-bottom: 22px;
+}
+@media (max-width: 767px) {
+  .profils{
+    width: 300px;
+    flex-direction: column;
+  }
+
+  .profil_box{
+    margin-bottom: 10px;
+    }
+}
